@@ -17,7 +17,7 @@ export default function HeroContent({openWaitlist}) {
 
       {/* Heading */}
 
-      <h1 className="text-7xl font-bold leading-tight text-white">
+      <h1 className="text-7xl bg-gradient-to-r from-blue-500 to-pink-700 bg-clip-text text-transparent font-bold leading-tight">
 
         Ride Smarter.
         <br />

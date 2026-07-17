@@ -17,7 +17,7 @@ export default function PhoneMockup() {
 
       {/* Phone */}
 
-      <div className="w-[330px] rounded-[40px] border-[6px] border-[#3b3b3b] bg-[#111827] p-5 shadow-2xl">
+      <div className="w-[330px] h-[645px] rounded-[40px] border-[6px] border-[#3b3b3b] bg-[#111827] p-5 shadow-2xl m-5">
 
         {/* Notch */}
 
@@ -25,7 +25,7 @@ export default function PhoneMockup() {
 
         {/* Top */}
 
-        <div className="mb-7 flex items-center justify-between">
+        <div className="mb-4 flex items-center justify-between">
           <Menu className="text-white" size={22} />
 
           <h2 className="text-2xl font-bold text-white">
