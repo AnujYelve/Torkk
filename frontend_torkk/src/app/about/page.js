@@ -73,19 +73,24 @@ export default function AboutPage() {
 
   const leaders = [
     {
-      name: "Shivasheesh Kumar",
+      name: "Mr. Shivasheesh Kumar",
       role: "FOUNDER & CEO",
       bio: "Driving the strategic direction and operational execution of Trok, focusing on zero-commission driver empowerment, deep tech, and scalable mobility ecosystems.",
+      email: "shivasheeshkumar@icloud.com",
+      linkedin: "https://www.linkedin.com/in/shivasheeshkumar/",
     },
     {
       name: "Ms. Mithlesh Kumari",
       role: "CO-FOUNDER",
       bio: "Steering corporate governance, organizational development, and key growth partnerships for Trok's nationwide expansion.",
+      email: "founder@blackoriginx.com",
     },
     {
       name: "Ecosystem Advisory Board",
       role: "CO-FOUNDING ADVISORS",
       bio: "Composed of industry veterans in software engineering, digital mobility, and venture scaling, providing direct oversight and growth acceleration support.",
+      email: "contact@blackoriginx.com",
+      location: "Gurugram, INDIA",
     },
   ];
 
@@ -334,8 +339,18 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold text-[#1B1B1F] tracking-tight leading-tight">
                     {leader.name}
                   </h3>
-                  <div className="text-xs font-bold uppercase tracking-widest text-[#3B36EA]">
-                    {leader.role}
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#3B36EA]">
+                      {leader.role}
+                    </span>
+                    {leader.location && (
+                      <>
+                        <span className="text-slate-300">•</span>
+                        <span className="text-xs font-semibold text-[#66687A]">
+                          {leader.location}
+                        </span>
+                      </>
+                    )}
                   </div>
                   <p className="text-sm sm:text-base text-[#66687A] leading-8 pt-2">
                     {leader.bio}
@@ -345,29 +360,49 @@ export default function AboutPage() {
                 {/* Card Footer Icons - Coloured & Larger */}
                 <div className="pt-4 border-t border-[#ECEAF4]/80 flex items-center gap-3">
                   {/* LinkedIn Brand Blue Icon */}
-                  <a
-                    href="#linkedin"
-                    aria-label="LinkedIn"
-                    className="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 shadow-md shadow-[#0A66C2]/25 transition-all duration-200"
-                  >
-                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.6a1.4 1.4 0 1 0 1.4 1.4 1.4 1.4 0 0 0-1.4-1.4z" />
-                    </svg>
-                  </a>
+                  {leader.linkedin ? (
+                    <a
+                      href={leader.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      className="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 shadow-md shadow-[#0A66C2]/25 transition-all duration-200"
+                    >
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.6a1.4 1.4 0 1 0 1.4 1.4 1.4 1.4 0 0 0-1.4-1.4z" />
+                      </svg>
+                    </a>
+                  ) : (
+                    /* LinkedIn icon commented out from Mithlesh and Ecosystem Advisory Board as requested */
+                    /*
+                    <a
+                      href="#linkedin"
+                      aria-label="LinkedIn"
+                      className="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 shadow-md shadow-[#0A66C2]/25 transition-all duration-200"
+                    >
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.6a1.4 1.4 0 1 0 1.4 1.4 1.4 1.4 0 0 0-1.4-1.4z" />
+                      </svg>
+                    </a>
+                    */
+                    null
+                  )}
 
                   {/* Authentic Official Gmail Icon */}
-                  <a
-                    href="mailto:contact@trok.com"
-                    aria-label="Email"
-                    className="w-10 h-10 rounded-full bg-white border border-slate-200/90 flex items-center justify-center hover:scale-110 shadow-md shadow-slate-200/60 transition-all duration-200"
-                  >
-                    <svg className="w-5.5 h-5.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path fill="#4285F4" d="M20 18h-2V9.25L12 13.5 6 9.25V18H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h1.5L12 8.5 18.5 4H20c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2z" />
-                      <path fill="#EA4335" d="M18.5 4L12 8.5 5.5 4H4c-1.1 0-2 .9-2 2v.5L12 13.5 22 6.5V6c0-1.1-.9-2-2-2h-1.5z" />
-                      <path fill="#34A853" d="M2 16v.5c0 1.1.9 2 2 2h2v-8L2 7.5V16z" />
-                      <path fill="#FBBC04" d="M22 16v-8.5l-4 3v8h2c1.1 0 2-.9 2-2z" />
-                    </svg>
-                  </a>
+                  {leader.email && (
+                    <a
+                      href={`mailto:${leader.email}`}
+                      aria-label="Email"
+                      className="w-10 h-10 rounded-full bg-white border border-slate-200/90 flex items-center justify-center hover:scale-110 shadow-md shadow-slate-200/60 transition-all duration-200"
+                    >
+                      <svg className="w-5.5 h-5.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#4285F4" d="M20 18h-2V9.25L12 13.5 6 9.25V18H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h1.5L12 8.5 18.5 4H20c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2z" />
+                        <path fill="#EA4335" d="M18.5 4L12 8.5 5.5 4H4c-1.1 0-2 .9-2 2v.5L12 13.5 22 6.5V6c0-1.1-.9-2-2-2h-1.5z" />
+                        <path fill="#34A853" d="M2 16v.5c0 1.1.9 2 2 2h2v-8L2 7.5V16z" />
+                        <path fill="#FBBC04" d="M22 16v-8.5l-4 3v8h2c1.1 0 2-.9 2-2z" />
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
