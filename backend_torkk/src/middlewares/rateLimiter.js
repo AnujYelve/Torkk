@@ -6,6 +6,7 @@ const authLimiter = rateLimit({
   max: 10,
   standardHeaders: true,
   legacyHeaders: false,
+  validate: { xForwardedForHeader: false },
   message: {
     success: false,
     message: "Too many requests from this IP. Please try again after 15 minutes.",
@@ -20,6 +21,7 @@ const generalLimiter = rateLimit({
   max: 60,
   standardHeaders: true,
   legacyHeaders: false,
+  validate: { xForwardedForHeader: false },
   message: {
     success: false,
     message: "Too many requests. Please slow down.",
