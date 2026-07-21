@@ -58,7 +58,7 @@ app.use(helmet({
   crossOriginResourcePolicy: { policy: "cross-origin" },
 }));
 
-const allowedOrigins = CORS_ORIGIN.split(",").map(o => o.trim());
+const allowedOrigins = CORS_ORIGIN.split(",").map(o => o.trim().replace(/\/$/, ""));
 app.use(cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (mobile, Postman, etc.)
