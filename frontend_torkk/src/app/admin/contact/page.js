@@ -119,7 +119,7 @@ export default function AdminContactSubmissionsPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-extrabold text-slate-900">Contact Submissions</h1>
+          <h1 className="text-2xl font-bold text-slate-900">Contact Submissions</h1>
           <p className="text-xs text-slate-500 mt-1">
             View, inspect, and respond to user messages submitted via the Contact page.
           </p>
@@ -398,7 +398,7 @@ export default function AdminContactSubmissionsPage() {
             <div className="space-y-3">
               <div>
                 <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">Subject</span>
-                <p className="text-sm font-extrabold text-slate-900">{selectedSubmission.subject || "General Inquiry"}</p>
+                <p className="text-sm font-bold text-slate-900">{selectedSubmission.subject || "General Inquiry"}</p>
               </div>
 
               <div>

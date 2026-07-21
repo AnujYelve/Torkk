@@ -204,14 +204,14 @@ export default function CareersPage() {
               <span>WE'RE HIRING</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1B1B1F] tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1B1B1F] tracking-tight leading-tight">
               Join the Mobility <br />
               <span className="bg-gradient-to-r from-[#3B36EA] via-[#6E55F2] to-[#C24D2E] bg-clip-text text-transparent">
                 Revolution.
               </span>
             </h1>
             
-            <p className="text-[#66687A] text-base sm:text-lg leading-relaxed max-w-lg">
+            <p className="text-[#66687A] text-base sm:text-lg leading-8 max-w-lg">
               At Torkk, we're not just building a transport platform; we're redefining how the world moves. Join a global team dedicated to safety, speed, and sustainability.
             </p>
 
@@ -262,10 +262,10 @@ export default function CareersPage() {
       {/* Perks & Benefits Section */}
       <section id="perks" className="space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1B1B1F]">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1B1B1F] leading-tight">
             Perks & Benefits
           </h2>
-          <p className="text-[#66687A] text-base">
+          <p className="text-[#66687A] text-base leading-8">
             We invest in our people so they can perform at their best.
           </p>
         </div>
@@ -281,8 +281,8 @@ export default function CareersPage() {
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${perk.color} border border-[#ECEAF4] flex items-center justify-center mb-6 ${perk.textColor} group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-[#1B1B1F] mb-3">{perk.title}</h3>
-                <p className="text-sm text-[#66687A] leading-relaxed">
+                <h3 className="text-xl font-bold text-[#1B1B1F] mb-3 leading-tight">{perk.title}</h3>
+                <p className="text-sm text-[#66687A] leading-8">
                   {perk.description}
                 </p>
               </div>
@@ -294,10 +294,10 @@ export default function CareersPage() {
       {/* Hiring Process Section */}
       <section className="space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1B1B1F]">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1B1B1F] leading-tight">
             Hiring Process
           </h2>
-          <p className="text-[#66687A] text-base">
+          <p className="text-[#66687A] text-base leading-8">
             Simple, transparent steps to joining our team.
           </p>
         </div>
@@ -305,11 +305,11 @@ export default function CareersPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {PROCESS_STEPS.map((step, idx) => (
             <div key={idx} className="flex flex-col items-center text-center space-y-4">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#3B36EA] to-[#6E55F2] text-white font-extrabold text-xl flex items-center justify-center shadow-lg shadow-[#3B36EA]/20">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#3B36EA] to-[#6E55F2] text-white font-bold text-xl flex items-center justify-center shadow-lg shadow-[#3B36EA]/20">
                 {step.number}
               </div>
-              <h3 className="text-xl font-bold text-[#1B1B1F]">{step.title}</h3>
-              <p className="text-sm text-[#66687A] leading-relaxed max-w-xs">
+              <h3 className="text-xl font-bold text-[#1B1B1F] leading-tight">{step.title}</h3>
+              <p className="text-sm text-[#66687A] leading-8 max-w-xs">
                 {step.description}
               </p>
             </div>
@@ -320,7 +320,7 @@ export default function CareersPage() {
       {/* Open Roles Section */}
       <section id="open-roles" className="space-y-8">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-[#ECEAF4] pb-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1B1B1F]">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1B1B1F] leading-tight">
             Open Roles
           </h2>
 
@@ -348,7 +348,7 @@ export default function CareersPage() {
           <ErrorAlert message={error} onRetry={fetchCareers} />
         ) : filteredCareers.length === 0 ? (
           <div className="text-center py-16 bg-[#F8F6FB] rounded-3xl border border-[#ECEAF4]">
-            <p className="text-lg font-bold text-[#1B1B1F]">No roles open in {selectedDept}</p>
+            <p className="text-lg font-bold text-[#1B1B1F] leading-tight">No roles open in {selectedDept}</p>
             <p className="text-sm text-[#66687A] mt-1">Check back soon or select another category.</p>
           </div>
         ) : (
@@ -359,7 +359,7 @@ export default function CareersPage() {
                 className="bg-white p-6 sm:p-8 rounded-3xl border border-[#ECEAF4] shadow-[0_10px_30px_rgba(110,85,242,0.04)] hover:shadow-xl hover:shadow-[#3B36EA]/10 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 group"
               >
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-[#1B1B1F] group-hover:text-[#3B36EA] transition-colors">
+                  <h3 className="text-xl font-bold text-[#1B1B1F] group-hover:text-[#3B36EA] transition-colors leading-tight">
                     {job.title}
                   </h3>
                   <div className="flex flex-wrap items-center gap-4 text-xs text-[#66687A]">
@@ -407,10 +407,10 @@ export default function CareersPage() {
                 <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-extrabold text-[#1B1B1F]">
+                 <h3 className="text-2xl font-bold text-[#1B1B1F] leading-tight">
                   Application Submitted!
                 </h3>
-                <p className="text-sm text-[#66687A] leading-relaxed">
+                <p className="text-sm text-[#66687A] leading-8">
                   Thank you for applying for <span className="font-bold text-[#1B1B1F]">{selectedJob.title}</span>. Our HR team has received your application and will review it shortly.
                 </p>
                 <button
@@ -426,7 +426,7 @@ export default function CareersPage() {
                   <span className="text-xs font-bold text-[#3B36EA] uppercase tracking-wider">
                     {selectedJob.department || "Career Opening"}
                   </span>
-                  <h3 className="text-2xl font-extrabold text-[#1B1B1F] mt-1">
+                  <h3 className="text-2xl font-bold text-[#1B1B1F] mt-1 leading-tight">
                     Apply for {selectedJob.title}
                   </h3>
                   <p className="text-xs text-[#66687A] mt-1 flex items-center gap-2">

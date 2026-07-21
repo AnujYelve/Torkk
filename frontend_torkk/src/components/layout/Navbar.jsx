@@ -33,10 +33,10 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Plans", href: "/plans" },
-    { name: "Careers", href: "/careers" },
+    // { name: "Plans", href: "/plans" },
+    // { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
+    // { name: "Blog", href: "/blog" },
   ];
 
   return (
@@ -58,7 +58,7 @@ export default function Navbar() {
                 e.currentTarget.style.display = "none";
               }}
             />
-            <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1B1B1F] group-hover:text-[#3B36EA] transition-colors">
+            <span className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1B1B1F] group-hover:text-[#3B36EA] transition-colors">
               {siteSettings?.companyName || "Trok"}
             </span>
           </Link>
@@ -84,15 +84,16 @@ export default function Navbar() {
 
           {/* Right Action */}
           <div className="hidden md:flex items-center gap-3">
-            <Link
+            {/* Admin Portal Link commented out as requested */}
+            {/* <Link
               href="/admin/login"
               className="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-[#3B36EA] bg-white hover:bg-[#F8F6FB] border border-[#6E55F2]/30 hover:border-[#3B36EA] rounded-full shadow-sm hover:shadow transition-all duration-300 hover:scale-105"
             >
               <Lock className="w-3.5 h-3.5" />
               Admin Portal
-            </Link>
+            </Link> */}
             <Link
-              href="/plans"
+              href="/contact"
               className="px-6 py-2.5 text-xs font-bold rounded-full bg-gradient-to-r from-[#3B36EA] via-[#6E55F2] to-[#C24D2E] text-white hover:shadow-lg hover:shadow-[#3B36EA]/25 shadow-md shadow-[#3B36EA]/15 transition-all duration-300 hover:scale-105 active:scale-95"
             >
               Get Started
@@ -128,16 +129,17 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-4 border-t border-[#ECEAF4] space-y-2">
-            <Link
+            {/* Admin Portal Mobile Link commented out as requested */}
+            {/* <Link
               href="/admin/login"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-semibold text-[#3B36EA] bg-white border border-[#6E55F2]/30 rounded-full shadow-sm"
             >
               <Lock className="w-4 h-4" />
               Admin Portal
-            </Link>
+            </Link> */}
             <Link
-              href="/plans"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-center px-4 py-2.5 text-sm font-bold rounded-full bg-gradient-to-r from-[#3B36EA] via-[#6E55F2] to-[#C24D2E] text-white shadow-md"
             >

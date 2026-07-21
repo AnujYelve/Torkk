@@ -107,7 +107,7 @@ export default function AdminProfilePage() {
           <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 sm:col-span-2 flex items-center justify-between">
             <div>
               <span className="text-slate-500 block mb-1">Administrative Role</span>
-              <span className="text-amber-400 font-extrabold text-sm flex items-center gap-1">
+              <span className="text-amber-400 font-bold text-sm flex items-center gap-1">
                 <ShieldCheck className="w-4 h-4" /> {user?.role || "SUPER_ADMIN"}
               </span>
             </div>

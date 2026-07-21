@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { settingsService } from "../../services/api";
 
 export default function Footer() {
@@ -16,103 +15,158 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-[#1D1D27] border-t border-slate-800 text-slate-300 pt-16 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-2 space-y-4">
+    <footer className="bg-[#0B0B10] border-t border-slate-800/80 text-slate-200 pt-16 pb-12">
+      {/* Full-width container with generous horizontal padding (eliminates large side spaces) */}
+      <div className="w-full max-w-[1500px] mx-auto px-6 sm:px-10 lg:px-16 space-y-12">
+        {/* Main Grid: Left Brand Column + Right Navigation Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 items-start">
+          {/* Brand Column (Left) */}
+          <div className="md:col-span-6 lg:col-span-7 space-y-6">
             <Link href="/" className="flex items-center gap-3.5">
               <img
                 src={siteSettings?.logoUrlLight || "/logo.png"}
-                alt={siteSettings?.companyName || "Trok"}
-                className="h-14 sm:h-16 w-auto object-contain max-h-16"
+                alt={siteSettings?.companyName || "Torkk"}
+                className="h-11 sm:h-14 w-auto object-contain max-h-14"
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                 }}
               />
-              <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-                {siteSettings?.companyName || "Trok"}
+              <span className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+                {siteSettings?.companyName || "Torkk"}
               </span>
             </Link>
-            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Revolutionizing mobility through zero-commission community trust. Fair pay for drivers, better prices for riders, and unmatched safety features.
+
+            <p className="text-base sm:text-lg text-slate-200 leading-8 max-w-xl font-normal">
+              Built for riders. Trusted by drivers. Experience safe, smart and seamless urban mobility across India.
             </p>
+
+            {/* AVAILABLE ON Section */}
+            <div className="space-y-3 pt-2">
+              <div className="text-xs sm:text-sm font-bold text-slate-300 tracking-widest uppercase">
+                AVAILABLE ON
+              </div>
+              <div className="flex flex-wrap items-center gap-4">
+                {/* App Store Button */}
+                <a
+                  href="#app-store"
+                  className="flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:border-white/40 transition-all text-sm font-semibold shadow-sm"
+                >
+                  <svg className="w-5 h-5 fill-current text-white" viewBox="0 0 24 24">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.85.96-2.93-.93.04-2.07.62-2.74 1.4-.6.7-1.13 1.81-.99 2.87 1.04.08 2.13-.56 2.77-1.34z" />
+                  </svg>
+                  <span>App Store</span>
+                </a>
+
+                {/* Google Play Button */}
+                <a
+                  href="#google-play"
+                  className="flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:border-white/40 transition-all text-sm font-semibold shadow-sm"
+                >
+                  <svg className="w-5 h-5 fill-current text-white" viewBox="0 0 24 24">
+                    <path d="M3.6 2.44A1.89 1.89 0 0 0 3 3.82v16.36c0 .54.23 1.03.6 1.38l.07.07L13.1 12.2v-.4L3.67 2.37l-.07.07zm11.39 11.45l2.67-2.67c.38-.38.38-1 0-1.38l-2.67-2.67L12.3 9.9v4.2l2.69 2.79zM4.73 2.69l8.69 8.69-2.07 2.07L4.73 6.83A1.9 1.9 0 0 1 4.73 2.7zm0 18.62a1.9 1.9 0 0 1 0-4.13l6.62-6.62 2.07 2.07-8.69 8.68z" />
+                  </svg>
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Social Icons Row */}
+            <div className="flex items-center gap-3.5 pt-2">
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/company/torkkride/"
+                aria-label="LinkedIn"
+                className="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 shadow-md shadow-[#0A66C2]/40 transition-all duration-200"
+              >
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.6a1.4 1.4 0 1 0 1.4 1.4 1.4 1.4 0 0 0-1.4-1.4z" />
+                </svg>
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/torkkapp/"
+                aria-label="Instagram"
+                className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#FD5949] via-[#D6249F] to-[#285AEB] text-white flex items-center justify-center hover:scale-110 shadow-md shadow-[#D6249F]/40 transition-all duration-200"
+              >
+                <svg className="w-5 h-5 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+
+              {/* X / Twitter */}
+              <a
+                href="https://x.com/torkkofficial?s=11"
+                aria-label="X"
+                className="w-10 h-10 rounded-full bg-white/15 border border-white/25 text-white flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 transition-all duration-200"
+              >
+                <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+
+
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-bold text-white text-xs tracking-wider uppercase mb-4">
-              Company
-            </h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link href="/about" className="text-slate-400 hover:text-white transition-colors duration-200">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-slate-400 hover:text-white transition-colors duration-200">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-slate-400 hover:text-white transition-colors duration-200">
-                  Blog & News
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-bold text-white text-xs tracking-wider uppercase mb-4">
-              Services
-            </h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link href="/plans" className="text-slate-400 hover:text-white transition-colors duration-200">
-                  Membership Plans
-                </Link>
-              </li>
-              <li>
-                <Link href="/#riders" className="text-slate-400 hover:text-white transition-colors duration-200">
-                  For Riders
-                </Link>
-              </li>
-              <li>
-                <Link href="/#drivers" className="text-slate-400 hover:text-white transition-colors duration-200">
-                  For Drivers
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="font-bold text-white text-xs tracking-wider uppercase mb-4">
-              Contact
-            </h3>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#6E55F2]" />
-                <span className="text-slate-300">{siteSettings?.supportEmail || "support@trok.com"}</span>
-              </li>
-              {siteSettings?.address && (
-                <li className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-[#6E55F2] shrink-0 mt-0.5" />
-                  <span className="text-slate-300">{siteSettings.address}</span>
+          {/* Navigation Columns (Right) */}
+          <div className="md:col-span-6 lg:col-span-5 grid grid-cols-2 gap-8 sm:gap-12">
+            {/* Company Column */}
+            <div className="space-y-4">
+              <h3 className="font-bold text-white text-lg sm:text-xl tracking-tight mb-2">
+                Company
+              </h3>
+              <ul className="space-y-4 text-base sm:text-lg">
+                <li>
+                  <Link href="/about" className="text-slate-200 hover:text-white font-medium transition-colors duration-200">
+                    About
+                  </Link>
                 </li>
-              )}
-            </ul>
+                {/* <li>
+                  <Link href="/careers" className="text-slate-200 hover:text-white font-medium transition-colors duration-200">
+                    Careers
+                  </Link>
+                </li> */}
+                <li>
+                  <Link href="/contact" className="text-slate-200 hover:text-white font-medium transition-colors duration-200">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about#story-promise" className="text-slate-200 hover:text-white font-medium transition-colors duration-200">
+                    Safety
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal Column */}
+            <div className="space-y-4">
+              <h3 className="font-bold text-white text-lg sm:text-xl tracking-tight mb-2">
+                Legal
+              </h3>
+              <ul className="space-y-4 text-base sm:text-lg">
+                <li>
+                  <Link href="/privacy" className="text-slate-200 hover:text-white font-medium transition-colors duration-200">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="text-slate-200 hover:text-white font-medium transition-colors duration-200">
+                    Terms & Conditions
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} {siteSettings?.companyName || "Trok"} Inc. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-          </div>
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm sm:text-base text-slate-200 font-medium">
+          <p>© 2026 BlackOriginX Private Limited. All rights reserved.</p>
+          <p className="text-slate-200">Torkk is a brand of BlackOriginX Pvt. Ltd.</p>
         </div>
       </div>
     </footer>

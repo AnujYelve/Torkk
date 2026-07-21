@@ -206,7 +206,7 @@ export default function AdminPlansPage() {
                       )}
                     </td>
                     <td className="px-6 py-4 text-slate-300 font-semibold">{plan.type}</td>
-                    <td className="px-6 py-4 text-amber-400 font-extrabold text-sm">
+                    <td className="px-6 py-4 text-amber-400 font-bold text-sm">
                       {plan.displayPrice || "—"}
                     </td>
                     <td className="px-6 py-4 text-slate-400 uppercase">—</td>

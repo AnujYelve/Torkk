@@ -38,10 +38,10 @@ export default function BlogListingPage() {
             <BookOpen className="w-3.5 h-3.5 text-[#6E55F2]" />
             <span>Trok Newsroom & Blog</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-[#1B1B1F] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold text-[#1B1B1F] tracking-tight leading-tight">
             Latest News & Product Updates
           </h1>
-          <p className="text-lg text-[#66687A]">
+          <p className="text-lg text-[#66687A] leading-8">
             Insights on fair mobility, driver empowerment, safety, and community trust.
           </p>
         </div>
@@ -84,10 +84,10 @@ export default function BlogListingPage() {
                       </span>
                     )}
                   </div>
-                  <h2 className="text-xl font-bold text-[#1B1B1F] group-hover:text-[#3B36EA] transition-colors line-clamp-2">
+                  <h2 className="text-xl font-bold text-[#1B1B1F] group-hover:text-[#3B36EA] transition-colors line-clamp-2 leading-tight">
                     {blog.title}
                   </h2>
-                  <p className="text-sm text-[#66687A] line-clamp-3 flex-grow">
+                  <p className="text-sm text-[#66687A] line-clamp-3 flex-grow leading-8">
                     {blog.excerpt || blog.content?.substring(0, 120)}...
                   </p>
                   <Link

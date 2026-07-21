@@ -52,8 +52,8 @@ export default function SingleBlogPage() {
           <ErrorAlert message={error} onRetry={fetchBlog} />
         ) : !blog ? (
           <div className="text-center py-12 bg-white rounded-3xl border border-[#ECEAF4] p-8">
-            <h2 className="text-2xl font-bold text-[#1B1B1F]">Article Not Found</h2>
-            <p className="text-sm text-[#66687A] mt-2">The requested blog post could not be found.</p>
+            <h2 className="text-2xl font-bold text-[#1B1B1F] leading-tight">Article Not Found</h2>
+            <p className="text-sm text-[#66687A] mt-2 leading-8">The requested blog post could not be found.</p>
             <Link
               href="/blog"
               className="mt-6 inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-[#3B36EA] via-[#6E55F2] to-[#C24D2E] text-white font-bold text-sm"
@@ -92,17 +92,17 @@ export default function SingleBlogPage() {
                 )}
               </div>
 
-              <h1 className="text-3xl sm:text-5xl font-extrabold text-[#1B1B1F] tracking-tight leading-tight">
+              <h1 className="text-3xl sm:text-5xl font-bold text-[#1B1B1F] tracking-tight leading-tight">
                 {blog.title}
               </h1>
 
               {blog.excerpt && (
-                <p className="text-lg text-[#66687A] font-medium leading-relaxed border-l-4 border-[#3B36EA] pl-4 italic">
+                <p className="text-lg text-[#66687A] font-medium leading-8 border-l-4 border-[#3B36EA] pl-4 italic">
                   {blog.excerpt}
                 </p>
               )}
 
-              <div className="prose prose-slate max-w-none text-[#1B1B1F] leading-relaxed pt-4 space-y-4 text-base whitespace-pre-line">
+              <div className="prose prose-slate max-w-none text-[#1B1B1F] leading-8 pt-4 space-y-4 text-base whitespace-pre-line">
                 {blog.content}
               </div>
             </div>

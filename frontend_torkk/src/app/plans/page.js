@@ -182,11 +182,11 @@ export default function SubscriptionPlansPage() {
             <Zap className="w-3.5 h-3.5 text-[#6E55F2]" />
             <span>Transparent Pricing</span>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-[#1B1B1F] tracking-tight">
+          <h1 className="text-4xl sm:text-6xl font-bold text-[#1B1B1F] tracking-tight leading-tight">
             Keep 100% of What You Earn. <br />
             <span className="bg-gradient-to-r from-[#3B36EA] via-[#6E55F2] to-[#C24D2E] bg-clip-text text-transparent">Zero Commission Platform.</span>
           </h1>
-          <p className="text-lg text-[#66687A] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-[#66687A] max-w-2xl mx-auto leading-8">
             Choose a predictable subscription plan tailored for your driving schedule or mobility needs. No surprise surge deductions.
           </p>
 
@@ -252,14 +252,14 @@ export default function SubscriptionPlansPage() {
                 }`}
               >
                 {plan.isPopular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#3B36EA] via-[#6E55F2] to-[#C24D2E] text-white font-extrabold text-[10px] uppercase tracking-wider shadow-md">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#3B36EA] via-[#6E55F2] to-[#C24D2E] text-white font-bold text-[10px] uppercase tracking-wider shadow-md">
                     Most Popular Choice
                   </div>
                 )}
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold text-[#1B1B1F]">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-[#1B1B1F] leading-tight">{plan.name}</h3>
                     <span className="px-3 py-1 rounded-full bg-[#F8F6FB] border border-[#ECEAF4] text-[#3B36EA] text-[10px] uppercase font-bold">
                       {plan.type || plan.targetRole}
                     </span>
@@ -270,14 +270,14 @@ export default function SubscriptionPlansPage() {
                   </p>
 
                   <div className="py-4 border-t border-b border-[#ECEAF4] min-h-[68px] flex items-center overflow-hidden">
-                    <span className="text-2xl sm:text-3xl font-extrabold text-[#1B1B1F] tracking-tight break-words">
+                    <span className="text-2xl sm:text-3xl font-bold text-[#1B1B1F] tracking-tight break-words">
                       {formatPrice(plan)}
                     </span>
                   </div>
 
                   {/* Feature Checklist */}
                   <div className="space-y-3 pt-2">
-                    <h4 className="text-xs font-bold text-[#1B1B1F] uppercase tracking-wider">
+                    <h4 className="text-xs font-bold text-[#1B1B1F] uppercase tracking-wider leading-tight">
                       Included Features
                     </h4>
                     <ul className="space-y-2.5 text-xs text-[#66687A]">
@@ -303,7 +303,7 @@ export default function SubscriptionPlansPage() {
             <HelpCircle className="w-3.5 h-3.5 text-[#6E55F2]" />
             <span>Got Questions?</span>
           </div>
-          <h3 className="text-3xl font-extrabold text-[#1B1B1F]">
+          <h3 className="text-3xl font-bold text-[#1B1B1F] leading-tight">
             Frequently Asked Questions
           </h3>
         </div>
@@ -328,7 +328,7 @@ export default function SubscriptionPlansPage() {
                   )}
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-6 text-xs sm:text-sm text-[#66687A] leading-relaxed border-t border-[#ECEAF4] pt-4">
+                  <div className="px-6 pb-6 text-xs sm:text-sm text-[#66687A] leading-8 border-t border-[#ECEAF4] pt-4">
                     {faq.answer}
                   </div>
                 )}

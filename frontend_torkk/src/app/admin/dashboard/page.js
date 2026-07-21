@@ -48,7 +48,7 @@ export default function AdminDashboardPage() {
     <div className="space-y-8">
       {/* Welcome & Top Metric Header */}
       <div>
-        <h1 className="text-2xl font-extrabold text-slate-900">System Overview</h1>
+        <h1 className="text-2xl font-bold text-slate-900">System Overview</h1>
         <p className="text-xs text-slate-500 mt-1">
           Monitor content status, job applications, contact submissions, and subscription tiers.
         </p>
@@ -109,7 +109,7 @@ export default function AdminDashboardPage() {
 
       {/* Quick Actions Panel */}
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-        <h3 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
+        <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
           <Activity className="w-4 h-4 text-[#3B36EA]" />
           Quick Management Actions
         </h3>

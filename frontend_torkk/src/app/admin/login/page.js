@@ -54,7 +54,7 @@ export default function AdminLoginPage() {
         <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-400 flex items-center justify-center mx-auto shadow-lg shadow-amber-500/20">
           <ShieldCheck className="w-7 h-7 text-slate-950 stroke-[2.5]" />
         </div>
-        <h2 className="text-3xl font-extrabold text-white">Trok Admin Portal</h2>
+        <h2 className="text-3xl font-bold text-white">Trok Admin Portal</h2>
         <p className="text-xs text-slate-400">
           Internal staff authentication. Enter your admin credentials to continue.
         </p>
