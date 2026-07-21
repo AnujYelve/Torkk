@@ -1,6 +1,36 @@
 import axios from "axios";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+const getApiBaseUrl = () => {
+  let url = process.env.NEXT_PUBLIC_API_URL;
+  if (!url) {
+    return "http://localhost:5000/api";
+  }
+  
+  url = url.trim();
+  
+  // Ensure it has a protocol
+  if (!/^https?:\/\//i.test(url) && !url.startsWith("//")) {
+    if (url.includes("localhost") || url.includes("127.0.0.1")) {
+      url = "http://" + url;
+    } else {
+      url = "https://" + url;
+    }
+  }
+  
+  // Strip trailing slash
+  if (url.endsWith("/")) {
+    url = url.slice(0, -1);
+  }
+  
+  // Ensure it ends with /api
+  if (!url.endsWith("/api")) {
+    url = url + "/api";
+  }
+  
+  return url;
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 const api = axios.create({
   baseURL: API_BASE_URL,
