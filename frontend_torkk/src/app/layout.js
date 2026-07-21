@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import PublicLayoutWrapper from "../components/layout/PublicLayoutWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,18 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Torkk | The Future of Safe Mobility",
+  title: "Trok | Fairer Rides. Safer Journeys.",
   description:
-    "India's next-generation mobility platform built around safety, transparency, and smart transportation.",
+    "The zero-commission ride-hailing platform built around community trust, safety, and transparent pricing.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased light`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-white text-slate-900" suppressHydrationWarning>
+        <PublicLayoutWrapper>{children}</PublicLayoutWrapper>
+      </body>
     </html>
   );
 }

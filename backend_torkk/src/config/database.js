@@ -1,13 +1,18 @@
-const mongoose = require("mongoose")
+/**
+ * Database connection helper.
+ * Tests the Prisma/PostgreSQL connection on startup.
+ */
 
+const prisma = require("./prisma");
 
-function connectToDB(){
-    mongoose.connect(process.env.MONGO_URI)
-    .then(()=>{
-        console.log("Connected to MongoDB");
-        
-    })
+async function connectToDB() {
+  try {
+    await prisma.$connect();
+    console.log("✅ Connected to PostgreSQL (Neon)");
+  } catch (err) {
+    console.error("❌ PostgreSQL connection failed:", err.message);
+    process.exit(1);
+  }
 }
 
-
-module.exports = connectToDB
+module.exports = connectToDB;

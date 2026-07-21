@@ -1,0 +1,313 @@
+// ============================================================
+// Torkkk Marketing Backend — Prisma Schema
+// Database: Neon PostgreSQL
+// ============================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ──────────────────────────────────────────────────
+
+enum AdminRole {
+  SUPER_ADMIN
+  ADMIN
+  EDITOR
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum CareerStatus {
+  OPEN
+  CLOSED
+}
+
+enum ApplicationStatus {
+  NEW
+  REVIEWING
+  SHORTLISTED
+  REJECTED
+}
+
+enum NewsletterStatus {
+  ACTIVE
+  UNSUBSCRIBED
+}
+
+// ─── Admin ─────────────────────────────────────────────────
+
+model Admin {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  name          String
+  role          AdminRole @default(ADMIN)
+  passwordHash  String
+  isActive      Boolean   @default(true)
+  lastLoginAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([email])
+  @@map("admins")
+}
+
+// ─── Blog ──────────────────────────────────────────────────
+
+model Blog {
+  id              String        @id @default(uuid())
+  title           String
+  slug            String        @unique
+  excerpt         String?
+  content         String
+  featuredImage   String?
+  author          String
+  category        String?
+  tags            String[]      @default([])
+  status          ContentStatus @default(DRAFT)
+  publishedAt     DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  // SEO fields
+  metaTitle       String?
+  metaDescription String?
+  canonicalUrl    String?
+  ogImage         String?
+  keywords        String[]      @default([])
+
+  // Soft delete
+  deletedAt       DateTime?
+
+  @@index([slug])
+  @@index([status])
+  @@index([publishedAt])
+  @@index([deletedAt])
+  @@map("blogs")
+}
+
+// ─── Career ────────────────────────────────────────────────
+
+model Career {
+  id               String        @id @default(uuid())
+  title            String
+  slug             String        @unique
+  department       String?
+  location         String?
+  employmentType   String?
+  experience       String?
+  description      String
+  requirements     String?
+  responsibilities String?
+  status           CareerStatus  @default(OPEN)
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  // Soft delete
+  deletedAt        DateTime?
+
+  applications     CareerApplication[]
+
+  @@index([slug])
+  @@index([status])
+  @@index([deletedAt])
+  @@map("careers")
+}
+
+// ─── Career Application ────────────────────────────────────
+
+model CareerApplication {
+  id          String            @id @default(uuid())
+  careerId    String
+  name        String
+  email       String
+  phone       String?
+  resumeUrl   String?
+  coverLetter String?
+  status      ApplicationStatus @default(NEW)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  career      Career            @relation(fields: [careerId], references: [id], onDelete: Cascade)
+
+  @@index([careerId])
+  @@index([email])
+  @@index([status])
+  @@map("career_applications")
+}
+
+// ─── Contact Submission ────────────────────────────────────
+
+model ContactSubmission {
+  id          String    @id @default(uuid())
+  name        String
+  email       String
+  phone       String?
+  subject     String?
+  message     String
+  inquiryType String?
+  isRead      Boolean   @default(false)
+  isResolved  Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([email])
+  @@index([isRead])
+  @@index([createdAt])
+  @@map("contact_submissions")
+}
+
+// ─── Press Release ─────────────────────────────────────────
+
+model PressRelease {
+  id              String        @id @default(uuid())
+  title           String
+  slug            String        @unique
+  summary         String?
+  content         String?
+  coverImage      String?
+  publicationDate DateTime?
+  externalLink    String?
+  type            String?
+  status          ContentStatus @default(DRAFT)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  // SEO fields
+  metaTitle       String?
+  metaDescription String?
+  canonicalUrl    String?
+  ogImage         String?
+  keywords        String[]      @default([])
+
+  // Soft delete
+  deletedAt       DateTime?
+
+  @@index([slug])
+  @@index([status])
+  @@index([publicationDate])
+  @@index([deletedAt])
+  @@map("press_releases")
+}
+
+// ─── FAQ ───────────────────────────────────────────────────
+
+model FAQ {
+  id           String    @id @default(uuid())
+  question     String
+  answer       String
+  category     String?
+  displayOrder Int       @default(0)
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  // Soft delete
+  deletedAt    DateTime?
+
+  @@index([isActive])
+  @@index([displayOrder])
+  @@index([deletedAt])
+  @@map("faqs")
+}
+
+// ─── Subscription Plan ─────────────────────────────────────
+
+model SubscriptionPlan {
+  id           String    @id @default(uuid())
+  name         String
+  type         String
+  displayPrice String?
+  description  String?
+  features     String[]  @default([])
+  displayOrder Int       @default(0)
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  // Soft delete
+  deletedAt    DateTime?
+
+  @@index([isActive])
+  @@index([displayOrder])
+  @@index([deletedAt])
+  @@map("subscription_plans")
+}
+
+// ─── Newsletter Subscriber ─────────────────────────────────
+
+model NewsletterSubscriber {
+  id        String           @id @default(uuid())
+  email     String           @unique
+  status    NewsletterStatus @default(ACTIVE)
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@map("newsletter_subscribers")
+}
+
+// ─── Site Settings ─────────────────────────────────────────
+
+model SiteSettings {
+  id               String   @id @default("global")
+  companyName      String   @default("Torkkk")
+  supportEmail     String?
+  supportPhone     String?
+  address          String?
+  socialFacebook   String?
+  socialTwitter    String?
+  socialInstagram  String?
+  socialLinkedin   String?
+  appStoreIos      String?
+  playStoreAndroid String?
+  logoUrlLight     String?
+  logoUrlDark      String?
+  faviconUrl       String?
+  customJson       Json?    @default("{}")
+  updatedAt        DateTime @updatedAt
+
+  @@map("site_settings")
+}
+
+// ─── Homepage Content ──────────────────────────────────────
+
+model HomepageContent {
+  id             String   @id @default("homepage")
+  heroTitle      String   @default("Move Smarter with Torkkk")
+  heroSubtitle   String   @default("Reliable, safe and affordable rides at your fingertips.")
+  heroCtaText    String   @default("Download Now")
+  heroCtaLink    String   @default("#download")
+  bannerImageUrl String?
+  features       Json?    @default("[]")
+  updatedAt      DateTime @updatedAt
+
+  @@map("homepage_content")
+}
+
+// ─── Audit Log ─────────────────────────────────────────────
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  adminId    String?
+  adminEmail String?
+  action     String
+  targetId   String?
+  targetType String?
+  details    Json?    @default("{}")
+  createdAt  DateTime @default(now())
+
+  @@index([adminId])
+  @@index([action])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
