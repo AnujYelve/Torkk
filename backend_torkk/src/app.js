@@ -59,11 +59,33 @@ const allowedOrigins = CORS_ORIGIN.split(",").map(o => o.trim());
 app.use(cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (mobile, Postman, etc.)
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS."));
+    if (!origin) {
+      return callback(null, true);
     }
+    
+    // Check if explicitly allowed or wildcard is set
+    if (allowedOrigins.includes(origin) || allowedOrigins.includes("*")) {
+      return callback(null, true);
+    }
+    
+    // Dynamically allow vercel.app, railway.app, and localhost subdomains
+    try {
+      const parsedOrigin = new URL(origin);
+      const hostname = parsedOrigin.hostname;
+      
+      if (
+        hostname === "localhost" ||
+        hostname === "127.0.0.1" ||
+        hostname.endsWith(".vercel.app") ||
+        hostname.endsWith(".railway.app")
+      ) {
+        return callback(null, true);
+      }
+    } catch (e) {
+      // Ignore URL parsing errors
+    }
+    
+    callback(new Error(`Origin ${origin} not allowed by CORS.`));
   },
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
