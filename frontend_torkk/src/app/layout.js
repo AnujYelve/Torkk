@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Trok | Fairer Rides. Safer Journeys.",
+  title: "Trokk | Fairer Rides. Safer Journeys.",
   description:
     "The zero-commission ride-hailing platform built around community trust, safety, and transparent pricing.",
 };

@@ -52,19 +52,19 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3.5 group">
             <img
               src={siteSettings?.logoUrlLight || "/logo.png"}
-              alt={siteSettings?.companyName || "Trok"}
+              alt={siteSettings?.companyName || "Trokk"}
               className="h-14 sm:h-16 w-auto object-contain max-h-16 transition-transform duration-300 group-hover:scale-105"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
               }}
             />
             <span className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1B1B1F] group-hover:text-[#3B36EA] transition-colors">
-              {siteSettings?.companyName || "Trok"}
+              {siteSettings?.companyName || "Trokk"}
             </span>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-1 bg-white/90 px-4 py-1.5 rounded-full border border-[#ECEAF4] shadow-sm">
+          <nav className="hidden md:flex items-center space-x-1 bg-white/90 px-4 py-1.5 rounded-full border border-[#ECEAF4] shadow-sm ml-auto">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -92,12 +92,12 @@ export default function Navbar() {
               <Lock className="w-3.5 h-3.5" />
               Admin Portal
             </Link> */}
-            <Link
+            {/* <Link
               href="/contact"
               className="px-6 py-2.5 text-xs font-bold rounded-full bg-gradient-to-r from-[#3B36EA] via-[#6E55F2] to-[#C24D2E] text-white hover:shadow-lg hover:shadow-[#3B36EA]/25 shadow-md shadow-[#3B36EA]/15 transition-all duration-300 hover:scale-105 active:scale-95"
             >
               Get Started
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -138,13 +138,13 @@ export default function Navbar() {
               <Lock className="w-4 h-4" />
               Admin Portal
             </Link> */}
-            <Link
+            {/* <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-center px-4 py-2.5 text-sm font-bold rounded-full bg-gradient-to-r from-[#3B36EA] via-[#6E55F2] to-[#C24D2E] text-white shadow-md"
             >
               Get Started
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}

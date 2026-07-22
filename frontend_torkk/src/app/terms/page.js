@@ -113,7 +113,7 @@ export default function TermsOfServicePage() {
                   1. Agreement to Terms
                 </h2>
                 <p>
-                  These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Trok Inc. (“we,” “us,” or “our”), concerning your access to and use of the Trok application and website.
+                  These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and BlackOriginX (“we,” “us,” or “our”), concerning your access to and use of the Trok kapplication and website.
                 </p>
                 <p>
                   By accessing or using our services, you agree that you have read, understood, and agree to be bound by all of these Terms of Service. If you do not agree with all of these terms, you are expressly prohibited from using the application and services.
@@ -126,7 +126,7 @@ export default function TermsOfServicePage() {
                   2. User Accounts & Safety
                 </h2>
                 <p className="text-xs text-slate-500 font-medium italic">
-                  In short: You must register an account, maintain accurate information, and respect community safety guidelines when using Trok.
+                  In short: You must register an account, maintain accurate information, and respect community safety guidelines when using Trokk.
                 </p>
 
                 <ul className="space-y-3 pl-4 list-disc marker:text-[#3B36EA]">
@@ -134,7 +134,7 @@ export default function TermsOfServicePage() {
                     <strong className="text-[#1B1B1F]">Account Responsibility:</strong> You are responsible for safeguarding your login credentials and for all activities that occur under your account.
                   </li>
                   <li>
-                    <strong className="text-[#1B1B1F]">Driver Verification:</strong> Drivers on Trok must provide valid licensing, vehicle registration, and undergo identity verification.
+                    <strong className="text-[#1B1B1F]">Driver Verification:</strong> Drivers on Trokk must provide valid licensing, vehicle registration, and undergo identity verification.
                   </li>
                   <li>
                     <strong className="text-[#1B1B1F]">Community Standards:</strong> Zero tolerance for harassment, discrimination, or unsafe conduct during rides.
@@ -156,7 +156,7 @@ export default function TermsOfServicePage() {
                   3. Services & Zero-Commission Model
                 </h2>
                 <p>
-                  Trok provides a technology platform connecting independent riders and community drivers. Trok operates on a zero-commission policy where drivers retain 100% of their earned trip fares.
+                  Trokk provides a technology platform connecting independent riders and community drivers. Trokk operates on a zero-commission policy where drivers retain 100% of their earned trip fares.
                 </p>
 
                 {/* 2-Card Feature Grid */}
@@ -227,7 +227,7 @@ export default function TermsOfServicePage() {
                   6. Governing Law
                 </h2>
                 <p>
-                  These Terms shall be governed by and defined following the laws of India. Trok Inc. and yourself irrevocably consent that the courts of Haryana, India shall have exclusive jurisdiction to resolve any dispute which may arise.
+                  These Terms shall be governed by and defined following the laws of India. BlackOriginX and yourself irrevocably consent that the courts of Haryana, India shall have exclusive jurisdiction to resolve any dispute which may arise.
                 </p>
               </section>
 
@@ -252,7 +252,7 @@ export default function TermsOfServicePage() {
 
                 {/* Contact Card */}
                 <div className="bg-[#F8F6FB] p-6 rounded-2xl border border-slate-200/80 space-y-3 max-w-md my-4">
-                  <h4 className="text-base font-bold text-[#1B1B1F] leading-tight">Trok Inc.</h4>
+                  <h4 className="text-base font-bold text-[#1B1B1F] leading-tight">BlackOriginX</h4>
                   <p className="text-xs text-slate-600 leading-8">
                     Global HQ: Gurugram, Haryana<br />
                     India Office & Operations Hub
@@ -260,7 +260,7 @@ export default function TermsOfServicePage() {
                   <div className="pt-2 space-y-2 text-xs font-semibold text-[#3B36EA]">
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
-                      <a href="mailto:legal@trok.com" className="hover:underline">legal@trok.com</a>
+                      <a href="mailto:legal@blackoriginx.in" className="hover:underline">legal@blackoriginx.in</a>
                     </div>
 
                   </div>

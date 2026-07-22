@@ -88,7 +88,7 @@ export default function AdminLayout({ children }) {
             <ShieldCheck className="w-5 h-5 text-white stroke-[2.5]" />
           </div>
           <div>
-            <h1 className="font-bold text-slate-900 text-base tracking-tight">Trok Admin</h1>
+            <h1 className="font-bold text-slate-900 text-base tracking-tight">Trokk Admin</h1>
             <p className="text-[10px] text-[#3B36EA] font-bold uppercase tracking-wider">
               Staff Portal
             </p>
@@ -184,7 +184,7 @@ export default function AdminLayout({ children }) {
           />
           <div className="relative w-64 bg-white h-full flex flex-col border-r border-slate-200 z-10 p-4">
             <div className="p-2 mb-4 border-b border-slate-200 flex items-center justify-between">
-              <span className="font-bold text-slate-900 text-base">Trok Admin</span>
+              <span className="font-bold text-slate-900 text-base">Trokk Admin</span>
               <button
                 onClick={() => setMobileSidebarOpen(false)}
                 className="text-slate-500 hover:text-slate-900"

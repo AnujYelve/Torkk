@@ -42,18 +42,18 @@ export default function HeroVisual() {
         className="-left-2 bottom-16"
       />
 
-      <FloatingCard
+      {/* <FloatingCard
         icon={<FaStar size={18} />}
         title="Average Rating"
         value="4.9 / 5"
         className="-right-3 top-10"
-      />
+      /> */}
 
       <FloatingCard
         icon={<FaShieldAlt size={18} />}
         title="Ride Safety"
         value="Verified Drivers"
-        className="right-10 bottom-2"
+        className="-right-3 top-10"
       />
     </div>
   );

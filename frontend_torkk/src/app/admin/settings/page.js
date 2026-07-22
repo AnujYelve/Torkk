@@ -24,7 +24,7 @@ export default function AdminSettingsPage() {
   const [success, setSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
-    companyName: "Trok",
+    companyName: "Trokk",
     supportEmail: "support@torkkk.com",
     supportPhone: "+1 (800) 555-TORK",
     address: "100 Mobility Way, San Francisco, CA 94107",
@@ -50,7 +50,7 @@ export default function AdminSettingsPage() {
       const data = await settingsService.getSettings();
       if (data) {
         setFormData({
-          companyName: data.companyName || "Trok",
+          companyName: data.companyName || "Trokk",
           supportEmail: data.supportEmail || "support@torkkk.com",
           supportPhone: data.supportPhone || "+1 (800) 555-TORK",
           address: data.address || "",

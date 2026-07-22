@@ -114,7 +114,7 @@ export default function PrivacyPolicyPage() {
                   1. Introduction
                 </h2>
                 <p>
-                  Welcome to Trok. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us.
+                  Welcome to Trokk. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us.
                 </p>
                 <p>
                   When you use our services, you trust us with your personal information. We take your privacy very seriously. In this privacy notice, we seek to explain to you in the clearest way possible what information we collect, how we use it, and what rights you have in relation to it.
@@ -248,12 +248,12 @@ export default function PrivacyPolicyPage() {
                   8. Contact Us
                 </h2>
                 <p>
-                  If you have questions or comments about this policy, you may email us at privacy@trok.com or by post to:
+                  If you have questions or comments about this policy, you may email us at privacy@blackoriginx.in or by post to:
                 </p>
 
                 {/* Contact Card */}
                 <div className="bg-[#F8F6FB] p-6 rounded-2xl border border-slate-200/80 space-y-3 max-w-md my-4">
-                  <h4 className="text-base font-bold text-[#1B1B1F] leading-tight">Trok Inc.</h4>
+                  <h4 className="text-base font-bold text-[#1B1B1F] leading-tight">BlackOriginX</h4>
                   <p className="text-xs text-slate-600 leading-8">
                     Global HQ: Gurugram, Haryana<br />
                     India Office & Operations Hub
@@ -261,7 +261,7 @@ export default function PrivacyPolicyPage() {
                   <div className="pt-2 space-y-2 text-xs font-semibold text-[#3B36EA]">
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
-                      <a href="mailto:privacy@trok.com" className="hover:underline">privacy@trok.com</a>
+                      <a href="mailto:privacy@blackoriginx.in" className="hover:underline">privacy@blackoriginx.in</a>
                     </div>
 
                   </div>

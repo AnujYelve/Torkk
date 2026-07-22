@@ -33,6 +33,30 @@ import HeroContent from "../components/ui/HeroContent";
 import HeroVisual from "../components/ui/HeroVisual";
 import CaptainSection from "@/sections/captain/CaptainSection";
 
+const SafetyIcon = ({ className, ...props }) => (
+  <img src="/Safety.png" alt="Safety First" {...props} className="w-full h-full object-cover scale-[1.45] mix-blend-multiply" />
+);
+
+const VerifiedDriversIcon = ({ className, ...props }) => (
+  <img src="/Verified_drivers.png" alt="Verified Drivers" {...props} className="w-full h-full object-cover scale-[1.45] mix-blend-multiply" />
+);
+
+const PricingIcon = ({ className, ...props }) => (
+  <img src="/Transparent_pricing.png" alt="Transparent Pricing" {...props} className="w-full h-full object-cover scale-[1.45] mix-blend-multiply" />
+);
+
+const SubscriptionIcon = ({ className, ...props }) => (
+  <img src="/Subcriptions.png" alt="Subscription Benefits" {...props} className="w-full h-full object-cover scale-[1.45] mix-blend-multiply" />
+);
+
+const AIIcon = ({ className, ...props }) => (
+  <img src="/AI.png" alt="AI-Based Ride Matching" {...props} className="w-full h-full object-cover scale-[1.45] mix-blend-multiply" />
+);
+
+const SupportIcon = ({ className, ...props }) => (
+  <img src="/24X7.png" alt="24x7 Support" {...props} className="w-full h-full object-cover scale-[1.45] mix-blend-multiply" />
+);
+
 
 export default function HomePage() {
   const [cmsContent, setCmsContent] = useState(null);
@@ -123,38 +147,38 @@ export default function HomePage() {
     {
       title: "Safety First",
       desc: "Prioritizing end-to-end trip security with emergency SOS, live tracking, and biometric safety check-ins.",
-      icon: ShieldCheck,
-      color: "bg-[#3B36EA]/10 border-[#3B36EA]/20 text-[#3B36EA]",
+      icon: SafetyIcon,
+      color: "bg-emerald-500/10 border-emerald-500/20 text-emerald-600",
     },
     {
       title: "Verified Drivers",
       desc: "100% background checked and Aadhaar verified driver partners for complete peace of mind.",
-      icon: UserCheck,
-      color: "bg-[#6E55F2]/10 border-[#6E55F2]/20 text-[#6E55F2]",
+      icon: VerifiedDriversIcon,
+      color: "bg-blue-500/10 border-blue-500/20 text-blue-600",
     },
     {
       title: "Transparent Pricing",
       desc: "Zero commission cuts, zero surge price manipulation, and upfront fair fares for everyone.",
-      icon: CreditCard,
-      color: "bg-[#C24D2E]/10 border-[#C24D2E]/20 text-[#C24D2E]",
+      icon: PricingIcon,
+      color: "bg-indigo-500/10 border-indigo-500/20 text-indigo-600",
     },
     {
       title: "Subscription Benefits",
       desc: "Flexible subscription plans for driver partners and commuters to maximize earnings and savings.",
-      icon: Zap,
-      color: "bg-[#3B36EA]/10 border-[#3B36EA]/20 text-[#3B36EA]",
+      icon: SubscriptionIcon,
+      color: "bg-amber-500/10 border-amber-500/20 text-amber-600",
     },
     {
       title: "AI-Based Ride Matching",
       desc: "Smart AI algorithm to pair riders with optimal nearby drivers for ultra-fast pickups.",
-      icon: Bot,
-      color: "bg-[#6E55F2]/10 border-[#6E55F2]/20 text-[#6E55F2]",
+      icon: AIIcon,
+      color: "bg-violet-500/10 border-violet-500/20 text-violet-600",
     },
     {
       title: "24×7 Support",
       desc: "Round-the-clock dedicated customer care and rapid emergency response assistance.",
-      icon: Headphones,
-      color: "bg-[#C24D2E]/10 border-[#C24D2E]/20 text-[#C24D2E]",
+      icon: SupportIcon,
+      color: "bg-rose-500/10 border-rose-500/20 text-rose-600",
     },
   ];
 
@@ -199,7 +223,7 @@ export default function HomePage() {
                 className="bg-white p-8 rounded-3xl border border-slate-300 shadow-md hover:shadow-2xl hover:shadow-[#3B36EA]/15 hover:-translate-y-1 transition-all duration-300 relative group flex flex-col justify-between"
               >
                 <div>
-                  <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center mb-6 transition-transform group-hover:scale-110 ${item.color}`}>
+                  <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center mb-6 transition-transform group-hover:scale-110 overflow-hidden ${item.color}`}>
                     <IconComponent className="w-7 h-7" />
                   </div>
                   <h3 className="text-xl font-bold text-[#1B1B1F] mb-3 leading-tight">{item.title}</h3>
@@ -222,7 +246,7 @@ export default function HomePage() {
                 Simple & Fast
               </h2>
               <h3 className="text-3xl sm:text-4xl font-bold text-[#1B1B1F] leading-tight">
-                How Trok Works
+                How Trokk Works
               </h3>
             </div>
 
@@ -286,11 +310,11 @@ export default function HomePage() {
 
           {/* Right Column - Image Card */}
           <div className="lg:col-span-6">
-            <div className="bg-[#F8F6FB] rounded-[36px] p-6 sm:p-10 border border-slate-300 shadow-md flex items-center justify-center hover:shadow-lg transition-shadow">
+            <div className="bg-[#F8F6FB] rounded-[36px]  shadow-md flex items-center justify-center hover:shadow-lg transition-shadow">
               <img
-                src="/how_it_work_photo.svg"
+                src="/Work_image.png"
                 alt="How Trok Works Platform Mockup"
-                className="w-full h-auto rounded-2xl drop-shadow-sm"
+                className="w-full h-auto rounded-2xl "
               />
             </div>
           </div>
@@ -301,10 +325,10 @@ export default function HomePage() {
       {/* Staggered Bento Grid Safety Section */}
       <section id="safety" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6E55F2]/10 border border-[#6E55F2]/30 text-[#3B36EA] text-xs font-bold uppercase tracking-wide mb-3">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6E55F2]/10 border border-[#6E55F2]/30 text-[#3B36EA] text-xs font-bold uppercase tracking-wide mb-3">
             <Shield className="w-3.5 h-3.5 text-[#6E55F2]" />
             <span>Safety First</span>
-          </div>
+          </div> */}
           <h2 className="text-3xl sm:text-5xl font-bold text-[#1B1B1F] tracking-tight leading-tight">
             Safety Section
           </h2>

@@ -314,21 +314,20 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              {/* Map Graphic Container (Original Clean Rounded Rectangle Card) */}
-              <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-[#0F1629] p-8 text-white shadow-2xl min-h-[400px] flex flex-col justify-end">
-                {/* Background Map Visual */}
-                <div
-                  className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity"
-                  style={{
-                    backgroundImage: `radial-gradient(circle at 50% 50%, rgba(59, 54, 234, 0.4), transparent 70%), url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80')`,
-                  }}
-                />
-
-                {/* Grid Overlay Lines */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293d_1px,transparent_1px),linear-gradient(to_bottom,#1f293d_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none" />
+              {/* Map Graphic Container (Real Google Maps Embed) */}
+              <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-2xl min-h-[400px] flex flex-col justify-end">
+                {/* Interactive Map Iframe */}
+                <iframe
+                  src="https://maps.google.com/maps?q=Gurugram,%20Haryana,%20India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  className="absolute inset-0 w-full h-full border-0"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Map of Gurugram, Haryana"
+                ></iframe>
 
                 {/* HQ Badge Overlay */}
-                <div className="relative z-10 bg-white/95 backdrop-blur-md text-[#1B1B1F] p-4 sm:p-5 rounded-2xl border border-white/20 shadow-xl flex items-center gap-4 max-w-md">
+                <div className="relative z-10 m-6 bg-white/95 backdrop-blur-md text-[#1B1B1F] p-4 sm:p-5 rounded-2xl border border-[#ECEAF4] shadow-xl flex items-center gap-4 max-w-md">
                   <div className="w-12 h-12 rounded-xl bg-[#3B36EA]/10 text-[#3B36EA] flex items-center justify-center shrink-0 font-bold">
                     <MapPin className="w-6 h-6" />
                   </div>

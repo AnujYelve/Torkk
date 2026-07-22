@@ -62,8 +62,17 @@ export default function Footer() {
                   href="#google-play"
                   className="flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:border-white/40 transition-all text-sm font-semibold shadow-sm"
                 >
-                  <svg className="w-5 h-5 fill-current text-white" viewBox="0 0 24 24">
-                    <path d="M3.6 2.44A1.89 1.89 0 0 0 3 3.82v16.36c0 .54.23 1.03.6 1.38l.07.07L13.1 12.2v-.4L3.67 2.37l-.07.07zm11.39 11.45l2.67-2.67c.38-.38.38-1 0-1.38l-2.67-2.67L12.3 9.9v4.2l2.69 2.79zM4.73 2.69l8.69 8.69-2.07 2.07L4.73 6.83A1.9 1.9 0 0 1 4.73 2.7zm0 18.62a1.9 1.9 0 0 1 0-4.13l6.62-6.62 2.07 2.07-8.69 8.68z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 466 511.98"
+                    className="w-5 h-5 shrink-0"
+                  >
+                    <g fillRule="nonzero">
+                      <path fill="#EA4335" d="M199.9 237.8 1.4 470.17c7.22 24.57 30.16 41.81 55.8 41.81 11.16 0 20.93-2.79 29.3-8.37l244.16-139.46L199.9 237.8z" />
+                      <path fill="#FBBC04" d="m433.91 205.1-104.65-60-111.61 110.22 113.01 108.83 104.64-58.6c18.14-9.77 30.7-29.3 30.7-50.23-1.4-20.93-13.95-40.46-32.09-50.22z" />
+                      <path fill="#34A853" d="M199.42 273.45 329.27 145.1 87.9 8.37C79.53 2.79 68.36 0 57.2 0 30.7 0 6.98 18.14 1.4 41.86l198.02 231.59z" />
+                      <path fill="#4285F4" d="M1.39 41.86C0 46.04 0 51.63 0 57.2v397.64c0 5.57 0 9.76 1.4 15.34l216.27-214.86L1.39 41.86z" />
+                    </g>
                   </svg>
                   <span>Google Play</span>
                 </a>
@@ -135,7 +144,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#story-promise" className="text-slate-200 hover:text-white font-medium transition-colors duration-200">
+                  <Link href="/#safety" className="text-slate-200 hover:text-white font-medium transition-colors duration-200">
                     Safety
                   </Link>
                 </li>

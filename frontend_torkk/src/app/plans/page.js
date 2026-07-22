@@ -130,7 +130,7 @@ export default function SubscriptionPlansPage() {
       id: 1,
       question: "How does the 0% commission driver model work?",
       answer:
-        "Trok charges driver partners a flat weekly or monthly subscription fee instead of taking a percentage cut (25-30%) of each fare. You keep 100% of the trip total paid by passengers.",
+        "Trokk charges driver partners a flat weekly or monthly subscription fee instead of taking a percentage cut (25-30%) of each fare. You keep 100% of the trip total paid by passengers.",
     },
     {
       id: 2,

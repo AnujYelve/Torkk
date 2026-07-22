@@ -16,28 +16,64 @@ import {
   Mail,
 } from "lucide-react";
 
+const MissionIcon = ({ className, ...props }) => (
+  <img src="/our_mission.png" alt="Our Mission" {...props} className="w-[85%] h-[85%] object-contain mix-blend-multiply" />
+);
+
+const VisionIcon = ({ className, ...props }) => (
+  <img src="/our_vision.png" alt="Our Vision" {...props} className="w-[85%] h-[85%] object-contain mix-blend-multiply" />
+);
+
+const TrustIcon = ({ className, ...props }) => (
+  <img src="/Trust.png" alt="Trust" {...props} className="w-[85%] h-[85%] object-contain mix-blend-multiply" />
+);
+
+const SafetyIcon = ({ className, ...props }) => (
+  <img src="/Safety.png" alt="Safety" {...props} className="w-[85%] h-[85%] object-contain mix-blend-multiply" />
+);
+
+const FairnessIcon = ({ className, ...props }) => (
+  <img src="/Fairness.png" alt="Fairness" {...props} className="w-[85%] h-[85%] object-contain mix-blend-multiply" />
+);
+
+const InnovationIcon = ({ className, ...props }) => (
+  <img src="/innovatio.png" alt="Innovation" {...props} className="w-[85%] h-[85%] object-contain mix-blend-multiply" />
+);
+
+const CompanyFoundationIcon = ({ className, ...props }) => (
+  <img src="/Company_foundation.png" alt="Company Foundation" {...props} className="w-[85%] h-[85%] object-contain mix-blend-multiply" />
+);
+
+const PrimeVenturesIcon = ({ className, ...props }) => (
+  <img src="/Prime_ventures.png" alt="Prime Ventures" {...props} className="w-[85%] h-[85%] object-contain mix-blend-multiply" />
+);
+
+const UpcomingVenturesIcon = ({ className, ...props }) => (
+  <img src="/Upcoming_ventures.png" alt="Upcoming Ventures" {...props} className="w-[85%] h-[85%] object-contain mix-blend-multiply" />
+);
+
 export default function AboutPage() {
   const coreValues = [
     {
-      icon: Shield,
+      icon: TrustIcon,
       title: "Trust",
       description:
         "We build confidence through unwavering reliability and transparent action for all our users.",
     },
     {
-      icon: ShieldCheck,
+      icon: SafetyIcon,
       title: "Safety",
       description:
         "Relentless protection for the well-being of our riders and partners. It is our non-negotiable priority.",
     },
     {
-      icon: Scale,
+      icon: FairnessIcon,
       title: "Fairness",
       description:
         "Equal opportunity for drivers and transparent pricing for riders generate the foundation for our platform.",
     },
     {
-      icon: Lightbulb,
+      icon: InnovationIcon,
       title: "Innovation",
       description:
         "We challenge the status quo, constantly seeking smarter ways to solve complex mobility challenges.",
@@ -49,8 +85,8 @@ export default function AboutPage() {
       year: "2026",
       title: "Company Foundation",
       description:
-        "Trok is established as a next-generation mobility platform focused on zero-commission driver payouts and fair rider pricing.",
-      icon: Layers,
+        "BlackOriginX is established as a next-generation mobility platform focused on zero-commission driver payouts and fair rider pricing.",
+      icon: CompanyFoundationIcon,
       align: "left",
     },
     {
@@ -58,7 +94,7 @@ export default function AboutPage() {
       title: "Prime Venture",
       description:
         "Deployment of real-time ride matching, smart telemetry integrations, and community trust safety protocols.",
-      icon: Cpu,
+      icon: PrimeVenturesIcon,
       align: "right",
     },
     {
@@ -66,7 +102,7 @@ export default function AboutPage() {
       title: "Upcoming Ventures",
       description:
         "Expansion into next-generation smart fleet analytics, sustainable electric mobility networks, and AI-driven dispatch ecosystems.",
-      icon: Rocket,
+      icon: UpcomingVenturesIcon,
       align: "left",
     },
   ];
@@ -75,14 +111,14 @@ export default function AboutPage() {
     {
       name: "Mr. Shivasheesh Kumar",
       role: "FOUNDER & CEO",
-      bio: "Driving the strategic direction and operational execution of Trok, focusing on zero-commission driver empowerment, deep tech, and scalable mobility ecosystems.",
+      bio: "Driving the strategic direction and operational execution of Trokk, focusing on zero-commission driver empowerment, deep tech, and scalable mobility ecosystems.",
       email: "shivasheeshkumar@icloud.com",
       linkedin: "https://www.linkedin.com/in/shivasheeshkumar/",
     },
     {
       name: "Ms. Mithlesh Kumari",
       role: "CO-FOUNDER",
-      bio: "Steering corporate governance, organizational development, and key growth partnerships for Trok's nationwide expansion.",
+      bio: "Steering corporate governance, organizational development, and key growth partnerships for Trokk's nationwide expansion.",
       email: "founder@blackoriginx.com",
     },
     {
@@ -127,7 +163,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-[#66687A] text-lg sm:text-xl max-w-2xl leading-8">
-            Trok isn't just a ride-hailing application—it's a movement. Empowering drivers with zero commission and delivering unmatched reliability to every rider.
+            Trokk isn't just a ride-hailing application it's a movement. Empowering drivers with zero commission and delivering unmatched reliability to every rider.
           </p>
 
           <div className="flex flex-wrap items-center justify-start gap-4 pt-4">
@@ -165,10 +201,10 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-[#66687A] text-base leading-8 pt-2">
                 <p>
-                  Trok was born out of a simple yet transformative belief: ride-hailing should be fair, transparent, and rewarding for everyone involved. Traditional platforms charged excessive commissions from hard-working drivers while inflating fares for passengers. We set out to rewrite the rules.
+                  Trokk was born out of a simple yet transformative belief: ride-hailing should be fair, transparent, and rewarding for everyone involved. Traditional platforms charged excessive commissions from hard-working drivers while inflating fares for passengers. We set out to rewrite the rules.
                 </p>
                 <p>
-                  Powered by real-time dispatch technology, verified safety protocols, and a zero-commission model where drivers keep 100% of their earnings, Trok builds a stronger, more sustainable mobility ecosystem—one fair trip at a time.
+                  Powered by real-time dispatch technology, verified safety protocols, and a zero-commission model where drivers keep 100% of their earnings, Trokk builds a stronger, more sustainable mobility ecosystem one fair trip at a time.
                 </p>
               </div>
             </div>
@@ -191,8 +227,8 @@ export default function AboutPage() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Our Mission */}
           <div className="bg-white p-8 sm:p-10 rounded-tl-[50px] rounded-br-[50px] rounded-tr-2xl rounded-bl-2xl border-2 border-[#ECEAF4] shadow-[0_10px_30px_rgba(110,85,242,0.06)] hover:shadow-2xl hover:shadow-[#3B36EA]/15 transition-all duration-300 space-y-4">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#3B36EA]/10 to-[#6E55F2]/10 border border-[#3B36EA]/20 text-[#3B36EA] flex items-center justify-center">
-              <Target className="w-7 h-7" />
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#3B36EA]/10 to-[#6E55F2]/10 border border-[#3B36EA]/20 text-[#3B36EA] flex items-center justify-center overflow-hidden">
+              <MissionIcon />
             </div>
             <h3 className="text-2xl font-bold text-[#1B1B1F] leading-tight">Our Mission</h3>
             <p className="text-[#66687A] text-lg leading-8">
@@ -202,8 +238,8 @@ export default function AboutPage() {
 
           {/* Our Vision */}
           <div className="bg-white p-8 sm:p-10 rounded-tr-[50px] rounded-bl-[50px] rounded-tl-2xl rounded-br-2xl border-2 border-[#ECEAF4] shadow-[0_10px_30px_rgba(110,85,242,0.06)] hover:shadow-2xl hover:shadow-[#6E55F2]/15 transition-all duration-300 space-y-4">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#6E55F2]/10 to-[#C24D2E]/10 border border-[#6E55F2]/20 text-[#6E55F2] flex items-center justify-center">
-              <Eye className="w-7 h-7" />
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#6E55F2]/10 to-[#C24D2E]/10 border border-[#6E55F2]/20 text-[#6E55F2] flex items-center justify-center overflow-hidden">
+              <VisionIcon />
             </div>
             <h3 className="text-2xl font-bold text-[#1B1B1F] leading-tight">Our Vision</h3>
             <p className="text-[#66687A] text-lg leading-8">
@@ -231,7 +267,7 @@ export default function AboutPage() {
                   key={idx}
                   className="bg-white p-8 rounded-tl-[40px] rounded-br-[40px] rounded-tr-xl rounded-bl-xl border-2 border-[#ECEAF4] shadow-[0_10px_30px_rgba(110,85,242,0.04)] hover:shadow-2xl hover:shadow-[#3B36EA]/15 hover:-translate-y-1 transition-all duration-300 flex flex-col items-start space-y-4"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#3B36EA]/10 border border-[#3B36EA]/20 text-[#3B36EA] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-2xl bg-[#3B36EA]/10 border border-[#3B36EA]/20 text-[#3B36EA] flex items-center justify-center overflow-hidden">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-bold text-[#1B1B1F] leading-tight">{val.title}</h3>
@@ -288,7 +324,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* Center Node Icon (Perfectly Centered on Timeline Line) */}
-                    <div className="z-10 w-14 h-14 rounded-full bg-white border-2 border-[#6E55F2] shadow-lg shadow-[#3B36EA]/20 flex items-center justify-center text-[#3B36EA] shrink-0 my-4 md:my-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="z-10 w-14 h-14 rounded-full bg-white border-2 border-[#6E55F2] shadow-lg shadow-[#3B36EA]/20 flex items-center justify-center text-[#3B36EA] shrink-0 my-4 md:my-0 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
                       <Icon className="w-6 h-6" />
                     </div>
 
@@ -318,7 +354,7 @@ export default function AboutPage() {
         </section>
 
         {/* 6. Leadership Section (COLORED & LARGER SOCIAL ICONS) */}
-        <section className="space-y-10 pt-4">
+        {/* <section className="space-y-10 pt-4">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#3B36EA]">
               ECOSYSTEM ADVISORY
@@ -357,9 +393,9 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                {/* Card Footer Icons - Coloured & Larger */}
+                
                 <div className="pt-4 border-t border-[#ECEAF4]/80 flex items-center gap-3">
-                  {/* LinkedIn Brand Blue Icon */}
+                  
                   {leader.linkedin ? (
                     <a
                       href={leader.linkedin}
@@ -373,8 +409,7 @@ export default function AboutPage() {
                       </svg>
                     </a>
                   ) : (
-                    /* LinkedIn icon commented out from Mithlesh and Ecosystem Advisory Board as requested */
-                    /*
+
                     <a
                       href="#linkedin"
                       aria-label="LinkedIn"
@@ -384,11 +419,11 @@ export default function AboutPage() {
                         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.6a1.4 1.4 0 1 0 1.4 1.4 1.4 1.4 0 0 0-1.4-1.4z" />
                       </svg>
                     </a>
-                    */
-                    null
+
+
                   )}
 
-                  {/* Authentic Official Gmail Icon */}
+                  
                   {leader.email && (
                     <a
                       href={`mailto:${leader.email}`}
@@ -407,7 +442,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* 7. Bottom Callout Banner */}
         <section>
