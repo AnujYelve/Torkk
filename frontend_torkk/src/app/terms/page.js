@@ -252,7 +252,7 @@ export default function TermsOfServicePage() {
 
                 {/* Contact Card */}
                 <div className="bg-[#F8F6FB] p-6 rounded-2xl border border-slate-200/80 space-y-3 max-w-md my-4">
-                  <h4 className="text-base font-bold text-[#1B1B1F] leading-tight">BlackOriginX</h4>
+                  <h4 className="text-base font-bold text-[#1B1B1F] leading-tight">BlackOriginX Pvt Ltd</h4>
                   <p className="text-xs text-slate-600 leading-8">
                     Global HQ: Gurugram, Haryana<br />
                     India Office & Operations Hub
