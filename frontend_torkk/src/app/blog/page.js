@@ -36,7 +36,7 @@ export default function BlogListingPage() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6E55F2]/10 border border-[#6E55F2]/20 text-[#3B36EA] text-xs font-bold uppercase tracking-wider">
             <BookOpen className="w-3.5 h-3.5 text-[#6E55F2]" />
-            <span>Trokk Newsroom & Blog</span>
+            <span>Torkk Newsroom & Blog</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-[#1B1B1F] tracking-tight leading-tight">
             Latest News & Product Updates

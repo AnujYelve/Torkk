@@ -114,7 +114,7 @@ export default function PrivacyPolicyPage() {
                   1. Introduction
                 </h2>
                 <p>
-                  Welcome to Trokk. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us.
+                  Welcome to Torkk. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us.
                 </p>
                 <p>
                   When you use our services, you trust us with your personal information. We take your privacy very seriously. In this privacy notice, we seek to explain to you in the clearest way possible what information we collect, how we use it, and what rights you have in relation to it.
@@ -261,7 +261,7 @@ export default function PrivacyPolicyPage() {
                   <div className="pt-2 space-y-2 text-xs font-semibold text-[#3B36EA]">
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
-                      <a href="mailto:privacy@blackoriginx.in" className="hover:underline">privacy@blackoriginx.in</a>
+                      <a href="mailto:privacy@blackoriginx.com" className="hover:underline">privacy@blackoriginx.com</a>
                     </div>
 
                   </div>

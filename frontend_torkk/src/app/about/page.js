@@ -111,14 +111,14 @@ export default function AboutPage() {
     {
       name: "Mr. Shivasheesh Kumar",
       role: "FOUNDER & CEO",
-      bio: "Driving the strategic direction and operational execution of Trokk, focusing on zero-commission driver empowerment, deep tech, and scalable mobility ecosystems.",
+      bio: "Driving the strategic direction and operational execution of Torkk, focusing on zero-commission driver empowerment, deep tech, and scalable mobility ecosystems.",
       email: "shivasheeshkumar@icloud.com",
       linkedin: "https://www.linkedin.com/in/shivasheeshkumar/",
     },
     {
       name: "Ms. Mithlesh Kumari",
       role: "CO-FOUNDER",
-      bio: "Steering corporate governance, organizational development, and key growth partnerships for Trokk's nationwide expansion.",
+      bio: "Steering corporate governance, organizational development, and key growth partnerships for Torkk's nationwide expansion.",
       email: "founder@blackoriginx.com",
     },
     {
@@ -163,7 +163,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-[#66687A] text-lg sm:text-xl max-w-2xl leading-8">
-            Trokk isn't just a ride-hailing application it's a movement. Empowering drivers with zero commission and delivering unmatched reliability to every rider.
+            Torkk isn't just a ride-hailing application it's a movement. Empowering drivers with zero commission and delivering unmatched reliability to every rider.
           </p>
 
           <div className="flex flex-wrap items-center justify-start gap-4 pt-4">
@@ -201,10 +201,10 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-[#66687A] text-base leading-8 pt-2">
                 <p>
-                  Trokk was born out of a simple yet transformative belief: ride-hailing should be fair, transparent, and rewarding for everyone involved. Traditional platforms charged excessive commissions from hard-working drivers while inflating fares for passengers. We set out to rewrite the rules.
+                  Torkk was born out of a simple yet transformative belief: ride-hailing should be fair, transparent, and rewarding for everyone involved. Traditional platforms charged excessive commissions from hard-working drivers while inflating fares for passengers. We set out to rewrite the rules.
                 </p>
                 <p>
-                  Powered by real-time dispatch technology, verified safety protocols, and a zero-commission model where drivers keep 100% of their earnings, Trokk builds a stronger, more sustainable mobility ecosystem one fair trip at a time.
+                  Powered by real-time dispatch technology, verified safety protocols, and a zero-commission model where drivers keep 100% of their earnings, Torkk builds a stronger, more sustainable mobility ecosystem one fair trip at a time.
                 </p>
               </div>
             </div>

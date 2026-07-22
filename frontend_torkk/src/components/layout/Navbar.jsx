@@ -52,14 +52,14 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3.5 group">
             <img
               src={siteSettings?.logoUrlLight || "/logo.png"}
-              alt={siteSettings?.companyName || "Trokk"}
+              alt={siteSettings?.companyName || "Torkk"}
               className="h-14 sm:h-16 w-auto object-contain max-h-16 transition-transform duration-300 group-hover:scale-105"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
               }}
             />
             <span className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1B1B1F] group-hover:text-[#3B36EA] transition-colors">
-              {siteSettings?.companyName || "Trokk"}
+              {siteSettings?.companyName || "Torkk"}
             </span>
           </Link>
 

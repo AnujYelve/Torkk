@@ -113,7 +113,7 @@ export default function TermsOfServicePage() {
                   1. Agreement to Terms
                 </h2>
                 <p>
-                  These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and BlackOriginX (“we,” “us,” or “our”), concerning your access to and use of the Trok kapplication and website.
+                  These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and BlackOriginX (“we,” “us,” or “our”), concerning your access to and use of the Torkk application and website.
                 </p>
                 <p>
                   By accessing or using our services, you agree that you have read, understood, and agree to be bound by all of these Terms of Service. If you do not agree with all of these terms, you are expressly prohibited from using the application and services.
@@ -126,7 +126,7 @@ export default function TermsOfServicePage() {
                   2. User Accounts & Safety
                 </h2>
                 <p className="text-xs text-slate-500 font-medium italic">
-                  In short: You must register an account, maintain accurate information, and respect community safety guidelines when using Trokk.
+                  In short: You must register an account, maintain accurate information, and respect community safety guidelines when using Torkk.
                 </p>
 
                 <ul className="space-y-3 pl-4 list-disc marker:text-[#3B36EA]">
@@ -134,7 +134,7 @@ export default function TermsOfServicePage() {
                     <strong className="text-[#1B1B1F]">Account Responsibility:</strong> You are responsible for safeguarding your login credentials and for all activities that occur under your account.
                   </li>
                   <li>
-                    <strong className="text-[#1B1B1F]">Driver Verification:</strong> Drivers on Trokk must provide valid licensing, vehicle registration, and undergo identity verification.
+                    <strong className="text-[#1B1B1F]">Driver Verification:</strong> Drivers on Torkk must provide valid licensing, vehicle registration, and undergo identity verification.
                   </li>
                   <li>
                     <strong className="text-[#1B1B1F]">Community Standards:</strong> Zero tolerance for harassment, discrimination, or unsafe conduct during rides.
@@ -156,7 +156,7 @@ export default function TermsOfServicePage() {
                   3. Services & Zero-Commission Model
                 </h2>
                 <p>
-                  Trokk provides a technology platform connecting independent riders and community drivers. Trokk operates on a zero-commission policy where drivers retain 100% of their earned trip fares.
+                  Torkk provides a technology platform connecting independent riders and community drivers. Torkk operates on a zero-commission policy where drivers retain 100% of their earned trip fares.
                 </p>
 
                 {/* 2-Card Feature Grid */}
@@ -260,7 +260,7 @@ export default function TermsOfServicePage() {
                   <div className="pt-2 space-y-2 text-xs font-semibold text-[#3B36EA]">
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
-                      <a href="mailto:legal@blackoriginx.in" className="hover:underline">legal@blackoriginx.in</a>
+                      <a href="mailto:legal@blackoriginx.com" className="hover:underline">legal@blackoriginx.com</a>
                     </div>
 
                   </div>

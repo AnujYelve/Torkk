@@ -235,7 +235,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How Trok Works 4-Step Process */}
+      {/* How Torkk Works 4-Step Process */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
@@ -246,7 +246,7 @@ export default function HomePage() {
                 Simple & Fast
               </h2>
               <h3 className="text-3xl sm:text-4xl font-bold text-[#1B1B1F] leading-tight">
-                How Trokk Works
+                How Torkk Works
               </h3>
             </div>
 
@@ -313,7 +313,7 @@ export default function HomePage() {
             <div className="bg-[#F8F6FB] rounded-[36px]  shadow-md flex items-center justify-center hover:shadow-lg transition-shadow">
               <img
                 src="/Work_image.png"
-                alt="How Trok Works Platform Mockup"
+                alt="How Torkk Works Platform Mockup"
                 className="w-full h-auto rounded-2xl "
               />
             </div>
@@ -568,7 +568,7 @@ export default function HomePage() {
             Join Thousands Choosing Fairer Mobility
           </h3>
           <p className="text-[#66687A] text-base max-w-xl mx-auto mb-8">
-            Download Trok today on iOS or Android and experience zero-commission transparency.
+            Download Torkk today on iOS or Android and experience zero-commission transparency.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">

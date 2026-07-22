@@ -7,7 +7,58 @@ import {
 
 export default function CaptainIllustration() {
   return (
-    <div className="relative flex h-[320px] sm:h-[420px] items-center justify-center w-full max-w-[400px] sm:max-w-none mx-auto">
+    <div className="relative flex h-[320px] sm:h-[420px] items-center justify-center w-full max-w-[400px] sm:max-w-none mx-auto orbit-container">
+      <style>{`
+        .orbit-container {
+          --orbit-radius: 95px;
+        }
+        @media (min-width: 640px) {
+          .orbit-container {
+            --orbit-radius: 155px;
+          }
+        }
+        @keyframes orbit-1 {
+          0% {
+            transform: translate(-50%, -50%) rotate(0deg) translate(var(--orbit-radius)) rotate(0deg);
+          }
+          100% {
+            transform: translate(-50%, -50%) rotate(360deg) translate(var(--orbit-radius)) rotate(-360deg);
+          }
+        }
+        @keyframes orbit-2 {
+          0% {
+            transform: translate(-50%, -50%) rotate(120deg) translate(var(--orbit-radius)) rotate(-120deg);
+          }
+          100% {
+            transform: translate(-50%, -50%) rotate(480deg) translate(var(--orbit-radius)) rotate(-480deg);
+          }
+        }
+        @keyframes orbit-3 {
+          0% {
+            transform: translate(-50%, -50%) rotate(240deg) translate(var(--orbit-radius)) rotate(-240deg);
+          }
+          100% {
+            transform: translate(-50%, -50%) rotate(600deg) translate(var(--orbit-radius)) rotate(-600deg);
+          }
+        }
+        .orbit-card-1 {
+          animation: orbit-1 25s linear infinite;
+        }
+        .orbit-card-2 {
+          animation: orbit-2 25s linear infinite;
+        }
+        .orbit-card-3 {
+          animation: orbit-3 25s linear infinite;
+        }
+        .orbit-card-1:hover,
+        .orbit-card-2:hover,
+        .orbit-card-3:hover {
+          animation-play-state: paused;
+          scale: 1.05;
+          z-index: 20;
+        }
+      `}</style>
+
       {/* Background Glow */}
       <div className="absolute h-56 w-56 sm:h-80 sm:w-80 rounded-full bg-white/10 blur-3xl" />
       <div className="absolute h-40 w-40 sm:h-56 sm:w-56 rounded-full bg-pink-400/20 blur-3xl" />
@@ -19,8 +70,8 @@ export default function CaptainIllustration() {
         </div>
       </div>
 
-      {/* Earnings */}
-      <div className="absolute left-0 sm:left-6 top-4 sm:top-10 rounded-xl sm:rounded-2xl bg-white px-3 py-2 sm:px-5 sm:py-3 shadow-xl transition-all duration-300">
+      {/* Earnings Card */}
+      <div className="absolute left-1/2 top-1/2 orbit-card-1 rounded-xl sm:rounded-2xl bg-white px-3 py-2 sm:px-5 sm:py-3 shadow-xl transition-all duration-300">
         <div className="flex items-center gap-1.5 sm:gap-2">
           <FaRupeeSign className="text-sm sm:text-base text-green-600 shrink-0" />
           <span className="text-xs sm:text-sm font-semibold text-gray-800 whitespace-nowrap">
@@ -29,8 +80,8 @@ export default function CaptainIllustration() {
         </div>
       </div>
 
-      {/* Location */}
-      <div className="absolute right-0 sm:right-5 top-14 sm:top-16 rounded-xl sm:rounded-2xl bg-white px-3 py-2 sm:px-5 sm:py-3 shadow-xl transition-all duration-300">
+      {/* Location Card */}
+      <div className="absolute left-1/2 top-1/2 orbit-card-2 rounded-xl sm:rounded-2xl bg-white px-3 py-2 sm:px-5 sm:py-3 shadow-xl transition-all duration-300">
         <div className="flex items-center gap-1.5 sm:gap-2">
           <FaMapMarkerAlt className="text-sm sm:text-base text-red-500 shrink-0" />
           <span className="text-xs sm:text-sm font-semibold text-gray-800 whitespace-nowrap">
@@ -39,8 +90,8 @@ export default function CaptainIllustration() {
         </div>
       </div>
 
-      {/* Support */}
-      <div className="absolute bottom-4 sm:bottom-10 left-4 sm:left-14 rounded-xl sm:rounded-2xl bg-white px-3 py-2 sm:px-5 sm:py-3 shadow-xl transition-all duration-300">
+      {/* Support Card */}
+      <div className="absolute left-1/2 top-1/2 orbit-card-3 rounded-xl sm:rounded-2xl bg-white px-3 py-2 sm:px-5 sm:py-3 shadow-xl transition-all duration-300">
         <div className="flex items-center gap-1.5 sm:gap-2">
           <FaShieldAlt className="text-sm sm:text-base text-blue-600 shrink-0" />
           <span className="text-xs sm:text-sm font-semibold text-gray-800 whitespace-nowrap">
